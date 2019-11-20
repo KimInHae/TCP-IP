@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
     fgetc(stdin);
     fputs("Operator: ", stdout);
-    scanf_s("%c", &opmsg[opndCnt*OPSZ+1], 0);
+    scanf_s("%c", &opmsg[opndCnt*OPSZ+1]);
     send(hSocket, opmsg, opndCnt*OPSZ + 2, 0);
     recv(hSocket, (char*)&result, RLT_SIZE, 0);
 
